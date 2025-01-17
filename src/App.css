@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,63 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.side-bar {
+  max-width: 250px;
+  width: 25%;
+  height: 100%;
+  margin: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#appName {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+#appName h2 {
+  margin-left: 20px;
+}
+
+.container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.timer-text {
+  width: 100%;
+  padding: 2em 1em 0;
+  font-size: 7em;
+  text-align: center;
+}
+
+.timer-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }

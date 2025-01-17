@@ -3,35 +3,30 @@ import reactLogo from './assets/react.svg'
 import appLogo from './assets/icon.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import SidebarElement from './SideBarElement/SidebarElement'
+import TimerControls from './TimerControls/TimerControls'
+import { BiSolidTimer, BiClipboard, BiSolidCog } from "react-icons/bi";
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <a href="#">
-          <img src={appLogo} className='logo react' alt='App logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <section className="side-bar">
+        <div id="appName">
+          <img src={appLogo} height={50} width={50}/>
+          <h2>FocusTime</h2>
+        </div>
+        <SidebarElement icon = {BiSolidTimer} txt="Time Tracking"/>
+        <SidebarElement icon={BiClipboard} txt="Time Sheet"/>
+        <SidebarElement icon={BiSolidCog} txt="Settings"/>
+      </section>
+      <main>
+        <div className="container">
+          <h1 className='timer-text'>00:00</h1>
+          <TimerControls></TimerControls>
+        </div>
+      </main>
     </>
   )
 }
