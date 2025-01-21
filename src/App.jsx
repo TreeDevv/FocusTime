@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import appLogo from './assets/icon.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import SidebarElement from './SideBarElement/SidebarElement'
-import TimerControls from './TimerControls/TimerControls'
 import { BiSolidTimer, BiClipboard, BiSolidCog } from "react-icons/bi";
 
 
 function App() {
+
+  function handleCreateTimer() {
+    console.log("Creating timer")
+  }
 
   return (
     <>
@@ -22,9 +22,17 @@ function App() {
         <SidebarElement icon={BiSolidCog} txt="Settings"/>
       </section>
       <main>
-        <div className="container">
-          <h1 className='timer-text'>00:00</h1>
-          <TimerControls></TimerControls>
+        <div className="timer-create">
+          <input type='text' placeholder='What are you working on?'/>
+          <div>
+            <span>00:00:00</span>
+            <button onClick={handleCreateTimer}>Start</button>
+          </div>
+        </div>
+
+        <h2>Recent Timers</h2>
+        <div className='recent-timers'>
+
         </div>
       </main>
     </>

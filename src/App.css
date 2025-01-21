@@ -63,8 +63,12 @@ main {
   height: 100vh;
   background-color: var(--main-bg-color);
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 #appName {
@@ -78,24 +82,42 @@ main {
   margin-left: 20px;
 }
 
-.container {
-  width: 60%;
-  height: 100%;
+.timer-create {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: white;
+  border: 2px solid var(--light-gray-color);
+  padding: 20px;
+  width: 80%;
+  margin: 4em 0;
+}
+
+.timer-create div {
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
-.timer-text {
-  width: 100%;
-  padding: 2em 1em 0;
-  font-size: 7em;
-  text-align: center;
+.timer-create div span {
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px;
 }
 
-.timer-controls {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+.timer-create div button {
+  font-size: 20px;
+  padding: 15px 30px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.timer-create input {
+  border: none;
+  background-color: inherit;
+  outline: none;
+  font-size: 20px;
+  width: 60%;
 }
