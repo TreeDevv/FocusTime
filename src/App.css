@@ -71,6 +71,10 @@ button:hover {
   cursor: pointer;
 }
 
+ul {
+  padding: 0;
+}
+
 #appName {
   display: flex;
   flex-direction: row;
@@ -118,6 +122,60 @@ button:hover {
   border: none;
   background-color: inherit;
   outline: none;
+  color: black;
   font-size: 20px;
   width: 60%;
+}
+
+#category-add {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+#category-add .icon {
+  margin-right: 5px;
+}
+
+.recent-timers {
+  width: 80%;
+}
+
+.recent-timers ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style: none;
+}
+
+.recent-timers ul li {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid var(--light-gray-color);
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.recent-timers ul li span {
+  margin-right: 50px;
+  font-weight: 700;
+}
+
+.recent-timers ul li div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recent-timers button {
+  background-color: transparent;
+  border: none;
+  color: black;
 }
